@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .item h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .no-items {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>项目列表</h1>
+    {% if items %}
+        {% for item in items %}
+            <div class="item">
+                <h2><a href="{% url 'detail' item.id %}">{{ item.title }}</a></h2>
+                <p>{{ item.description }}</p>
+                <p class="date">创建时间: {{ item.created_at }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-items">暂无项目，请稍后再来查看。</p>
+    {% endif %}
+</body>
+</html>
