@@ -1,0 +1,4 @@
+# 您的GitHub SSH公钥
+# 请复制以下内容（从ssh-ed25519开始到邮箱结束的所有文本）并添加到GitHub账户
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINn7i5cbovCvTvXpvFgRiY9UzX1b2sU2jfIXHj68rMlb 2974297201@qq.com

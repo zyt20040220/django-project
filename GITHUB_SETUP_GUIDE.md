@@ -1,6 +1,6 @@
 # GitHub远程仓库创建指南
 
-由于当前环境中没有安装Git命令，无法直接通过命令行创建GitHub远程仓库。以下是在GitHub上手动创建仓库并关联本地项目的详细步骤：
+Git已经成功安装（版本2.51.1.windows.1），并且我们已经完成了本地仓库的初始化和提交。以下是在GitHub上创建远程仓库并关联本地项目的详细步骤：
 
 ## 步骤1：在GitHub上创建远程仓库
 
@@ -14,25 +14,16 @@
    - 不勾选其他选项
 4. 点击"Create repository"按钮
 
-## 步骤2：本地初始化Git仓库（后续操作）
+## 步骤2：关联到GitHub远程仓库
 
-当您的系统安装了Git后，可以在项目目录中执行以下命令：
+本地仓库已经初始化并完成了首次提交。创建GitHub远程仓库后，请执行以下命令关联并推送代码：
 
 ```bash
-# 初始化本地Git仓库
-git init
-
-# 添加所有文件到暂存区
-git add .
-
-# 提交更改
-git commit -m "Initial commit"
-
 # 关联到GitHub远程仓库（请将URL替换为您实际的仓库地址）
 git remote add origin https://github.com/您的用户名/django-project.git
 
 # 推送到远程仓库
-git push -u origin master
+git push -u origin main
 ```
 
 ## 步骤3：设置SSH密钥（推荐）
@@ -62,7 +53,7 @@ git push -u origin master
 ## 注意事项
 
 - 请确保替换所有示例中的用户名和仓库名称为您实际的信息
-- 如果您的分支名称不是`master`（GitHub现在默认使用`main`），请相应地调整命令
+- 注意：本地仓库默认分支为`main`，与GitHub当前默认分支一致
 - 首次推送可能需要输入GitHub账号凭证进行认证
 
 ## 后续操作
